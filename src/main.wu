@@ -1,0 +1,41 @@
+write: extern fun(...?) = "io.write"
+
+shark_gen: fun(name: str) {
+  i := 0
+
+  while i < 7 {
+    if i % 2 == 0 {
+      write(name ++ "! ")
+    } else {
+      doo_doo()
+    }
+
+    i += 1
+  }
+
+  write(r"\n")
+  write(r"\n")
+}
+
+doo_doo: fun {
+  i := 0
+
+  while i < 6 {
+    write("doo")
+
+    if i == 1 {
+      write(", ")
+    } else {
+      write("  ")
+    }
+
+    i += 1
+  }
+
+  write(r"\n")
+}
+
+shark_gen("baby shark")
+shark_gen("mommy shark")
+shark_gen("daddy shark")
+shark_gen("grandma shark")
